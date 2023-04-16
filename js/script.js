@@ -4,7 +4,7 @@ const numberInput = document.querySelector('.number-input');
 let guessNumber = Math.trunc(Math.random() * 20 + 1)
 const score = document.querySelector('.score');
 let count = 20
-console.log(guessNumber)
+let highscore = 0
 
 function guessTheNumber() {    
     let userNumber = Number(numberInput.value)
@@ -17,7 +17,10 @@ function guessTheNumber() {
         document.querySelector('.question').textContent = 'You win!'
         document.querySelector('body').style.backgroundColor = 'rgb(114, 69, 86)'
         document.querySelector('.question').style.width = '60rem'
-        document.querySelector('.highscore').textContent = count
+        if (count > highscore) {
+            highscore = count
+            document.querySelector('.highscore').textContent = highscore
+         }        
     } else if (userNumber < guessNumber) {        
         count--
         score.textContent = count
