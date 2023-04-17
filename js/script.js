@@ -46,5 +46,6 @@ btnAgain.addEventListener('click', () => {
     numberInput.value = ''
     score.textContent = count
     document.querySelector('.question').textContent = '???'
+    document.querySelector('.question').style.width = '25rem'
     document.querySelector('body').style.backgroundColor = 'rgb(69, 114, 112)'
  })
