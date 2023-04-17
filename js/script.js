@@ -14,7 +14,7 @@ function guessTheNumber() {
     } else if (userNumber === guessNumber) {
         numberInput.disabled = true
         score.textContent = count        
-        document.querySelector('.question').textContent = 'You win!'
+        document.querySelector('.question').textContent = 'You Win!'
         document.querySelector('body').style.backgroundColor = 'rgb(114, 69, 86)'
         document.querySelector('.question').style.width = '100rem'
         if (count > highscore) {
@@ -24,18 +24,19 @@ function guessTheNumber() {
     } else if (userNumber < guessNumber) {        
         count--
         score.textContent = count
-        document.querySelector('.question').textContent = 'not enough'
+        document.querySelector('.question').textContent = 'Too Low'
         document.querySelector('.question').style.width = '50rem'
     } else if (userNumber > guessNumber) {
         count--
         score.textContent = count
-        document.querySelector('.question').textContent = 'too much'
+        document.querySelector('.question').textContent = 'Too High'
         document.querySelector('.question').style.width = '50rem'
     }
     } else {
         numberInput.disabled = true
         score.textContent = 0
-        document.querySelector('.question').textContent = 'Game over!'
+        document.querySelector('.question').textContent = 'Game Over!'
+        document.querySelector('.question').style.width = '100%'
         document.querySelector('body').style.backgroundColor = 'rgb(0, 0, 0)'
         }    
     }
