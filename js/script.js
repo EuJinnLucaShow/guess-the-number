@@ -21,16 +21,11 @@ function guessTheNumber() {
             highscore = count
             document.querySelector('.highscore').textContent = highscore
          }        
-    } else if (userNumber < guessNumber) {        
+    } else if (userNumber !== guessNumber) {        
         count--
-        score.textContent = count
-        document.querySelector('.question').textContent = 'Too Low'
+        score.textContent = count        
         document.querySelector('.question').style.width = '50rem'
-    } else if (userNumber > guessNumber) {
-        count--
-        score.textContent = count
-        document.querySelector('.question').textContent = 'Too High'
-        document.querySelector('.question').style.width = '50rem'
+        document.querySelector('.question').textContent = userNumber < guessNumber ? 'Too Low' : 'Too High'
     }
     } else {
         numberInput.disabled = true
