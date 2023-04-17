@@ -13,7 +13,8 @@ function guessTheNumber() {
         alert('Enter number.')
     } else if (userNumber === guessNumber) {
         // count--
-        score.textContent = count
+        btnCheck.disabled = true
+        score.textContent = count        
         document.querySelector('.question').textContent = 'You win!'
         document.querySelector('body').style.backgroundColor = 'rgb(114, 69, 86)'
         document.querySelector('.question').style.width = '60rem'
@@ -48,4 +49,5 @@ btnAgain.addEventListener('click', () => {
     document.querySelector('.question').textContent = '???'
     document.querySelector('.question').style.width = '25rem'
     document.querySelector('body').style.backgroundColor = 'rgb(69, 114, 112)'
+    btnCheck.disabled = false
  })
