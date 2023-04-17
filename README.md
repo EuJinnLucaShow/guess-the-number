@@ -1,1 +1,1 @@
-# guess-the-number
+# Project #1. Guess the Number!
