@@ -32,9 +32,11 @@ function guessTheNumber() {
         document.querySelector('.question').textContent = 'too much'
         document.querySelector('.question').style.width = '50rem'
     }
-    } else {        
+    } else {
+        numberInput.disabled = true
         score.textContent = 0
         document.querySelector('.question').textContent = 'Game over!'
+        document.querySelector('body').style.backgroundColor = 'rgb(0, 0, 0)'
         }    
     }
 
