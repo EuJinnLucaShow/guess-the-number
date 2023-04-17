@@ -94,6 +94,10 @@ h1 {
   margin-bottom: 3rem;
 }
 
+input:disabled {
+    opacity: 0.5;
+}
+
 .btn {
   border: none;
   background-color: #fff;
@@ -116,4 +120,3 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
-

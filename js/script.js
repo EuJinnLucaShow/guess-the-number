@@ -12,7 +12,6 @@ function guessTheNumber() {
     if (!userNumber) {
         alert('Enter number.')
     } else if (userNumber === guessNumber) {
-        // count--
         numberInput.disabled = true
         score.textContent = count        
         document.querySelector('.question').textContent = 'You win!'
