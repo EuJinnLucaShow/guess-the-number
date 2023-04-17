@@ -16,7 +16,7 @@ function guessTheNumber() {
         score.textContent = count        
         document.querySelector('.question').textContent = 'You win!'
         document.querySelector('body').style.backgroundColor = 'rgb(114, 69, 86)'
-        document.querySelector('.question').style.width = '60rem'
+        document.querySelector('.question').style.width = '100rem'
         if (count > highscore) {
             highscore = count
             document.querySelector('.highscore').textContent = highscore
